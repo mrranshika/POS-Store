@@ -3,27 +3,42 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="webthemez">
-    <title>Rolls Car Rental Bootstrap Website Template - WebThemez</title>
-	<!-- core CSS -->
+    <meta name="description" content="Rolls Car Rental - Premium car rental service with luxury vehicles, flexible packages, and 24/7 assistance.">
+    <meta name="author" content="Rolls Car Rental">
+    <title>Rolls Car Rental | Premium Car Rental Service</title>
+
+    <!-- Google Fonts - Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">  
-	<link href="css/magnific-popup.css" rel="stylesheet">  
-	<link href="css/gallery-1.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet"> 
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico"> 
-</head> 
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/gallery-1.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+</head>
 
 <body id="home">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner">
+                <i class="fa fa-car"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#home" id="back-to-top" title="Back to Top">
+        <i class="fa fa-angle-up"></i>
+    </a>
 
     <header id="header">
         <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
@@ -35,414 +50,468 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-					<i class="fa fa-car" aria-hidden="true"></i>
-                    <div class="logoSection"> <a class="navbar-brand" href="index.html">Rolls</a>
-					<span class="caption">Car Rental</span>
-					</div>
+                    <div class="logoSection">
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                        <a class="navbar-brand" href="index.html">Rolls</a>
+                        <span class="caption">Car Rental</span>
+                    </div>
                 </div>
-				
+
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="#home">Home</a></li> 
-                        <li class="scroll"><a href="#services">Our Service</a></li>
-                        <li class="scroll"><a href="#about">About Us</a></li>
-                        <li class="scroll"><a href="#portfolio">Gallery</a></li>
+                        <li class="scroll active"><a href="#home">Home</a></li>
+                        <li class="scroll"><a href="#services">Services</a></li>
+                        <li class="scroll"><a href="#about">About</a></li>
+                        <li class="scroll"><a href="#portfolio">Fleet</a></li>
                         <li class="scroll"><a href="#our-team">Team</a></li>
                         <li class="scroll"><a href="#pricing">Pricing</a></li>
-                        <li class="scroll"><a href="#contact-us">Contact</a></li>                        
+                        <li class="scroll"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </header><!--/header-->
+            </div>
+        </nav>
+    </header>
 
+    <!-- Hero Slider -->
     <section id="main-slider">
         <div class="owl-carousel">
             <div class="item" style="background-image: url(images/slider/bg1.jpg);">
                 <div class="slider-inner">
                     <div class="container">
-                        <div class="row"> 
-							<div class="carousel-caption">
+                        <div class="row">
+                            <div class="carousel-caption">
                                 <div class="carousel-content">
+                                    <span class="subtitle wow fadeInUp">Premium Experience</span>
                                     <h2>DRIVE IN THE CITY</h2>
-                                    <p>Get a Car on Rent</p> 
+                                    <p>Get a Car on Rent & Explore the World</p>
+                                    <div class="slider-btns">
+                                        <a class="btn btn-primary btn-lg" href="#pricing">View Plans</a>
+                                        <a class="btn btn-outline btn-lg" href="#portfolio">Our Fleet</a>
+                                    </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div><!--/.item-->
-             <div class="item" style="background-image: url(images/slider/bg2.jpg);">
+            </div>
+            <div class="item" style="background-image: url(images/slider/bg2.jpg);">
                 <div class="slider-inner">
                     <div class="container">
-                        <div class="row"> 
-							<div class="carousel-caption">
+                        <div class="row">
+                            <div class="carousel-caption">
                                 <div class="carousel-content">
+                                    <span class="subtitle wow fadeInUp">Exclusive Offers</span>
                                     <h2>Car Rental Deals</h2>
-                                    <p>Live the life</p> 
+                                    <p>Live the Life You Deserve</p>
+                                    <div class="slider-btns">
+                                        <a class="btn btn-primary btn-lg" href="#pricing">Book Now</a>
+                                        <a class="btn btn-outline btn-lg" href="#about">Learn More</a>
+                                    </div>
                                 </div>
                             </div>
-							</div>
-                        </div> </div>
+                        </div>
                     </div>
-                </div>
-            </div><!--/.item-->
-        </div><!--/.owl-carousel-->
-    </section><!--/#main-slider-->
-
-    <section id="hero-text" class="wow fadeIn">
-        <div class="container">`
-            <div class="row">
-                <div class="col-sm-9">
-                    <h2>Best Car Rental In The City</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum. 
-                    </p>
-                </div>
-                <div class="col-sm-3 text-right">
-                    <a class="btn btn-primary btn-lg" href="#pricing">Plans!</a>
                 </div>
             </div>
         </div>
-    </section><!--/#hero-text-->
-    <section id="services" >
-        <div class="container">
+    </section>
 
+    <!-- Hero Text Banner -->
+    <section id="hero-text" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>Best Car Rental In The City</h2>
+                    <p>Experience premium car rental services with our extensive fleet of luxury and economy vehicles. We offer flexible packages, 24/7 roadside assistance, and unbeatable rates to make every journey memorable.</p>
+                </div>
+                <div class="col-sm-3 text-right">
+                    <a class="btn btn-primary btn-lg" href="#pricing">View Plans!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Our Services</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+                <p class="text-center wow fadeInDown">We provide world-class car rental services tailored to meet<br> your every need with comfort and reliability.</p>
             </div>
 
             <div class="row">
                 <div class="features">
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
                         <div class="media service-box">
-						<div class="hexagon">
-						  <div class="inner">              
-							  <i class="fa fa-heart-o"></i>
-						  </div>
-						</div> 
+                            <div class="service-icon">
+                                <i class="fa fa-heart-o"></i>
+                            </div>
                             <div class="media-body">
                                 <h4 class="media-heading">City Ride</h4>
-                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                                <p>Navigate the city in style with our premium city ride service. Comfortable, reliable, and always on time for your urban adventures.</p>
                             </div>
                         </div>
-                    </div><!--/.col-md-4-->
+                    </div>
 
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
                         <div class="media service-box">
-						<div class="hexagon">
-						  <div class="inner">              
-							<i class="fa fa-line-chart"></i>
-						  </div>
-						</div>  
+                            <div class="service-icon">
+                                <i class="fa fa-diamond"></i>
+                            </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Luxury Cars</h4>
-                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                                <p>Choose from our exclusive collection of luxury vehicles. Experience elegance and performance on every journey you take.</p>
                             </div>
                         </div>
-                    </div><!--/.col-md-4-->
+                    </div>
 
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
-                        <div class="media service-box"> 
-								<div class="hexagon">
-						  <div class="inner">  
-                                <i class="fa fa-star-o"></i>
-						  </div>
-						</div>  
+                        <div class="media service-box">
+                            <div class="service-icon">
+                                <i class="fa fa-shield"></i>
+                            </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Insurance</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                                <p>Drive with confidence knowing all our rentals come with comprehensive insurance coverage for your peace of mind.</p>
                             </div>
                         </div>
-                    </div><!--/.col-md-4-->
-                
+                    </div>
+
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
                         <div class="media service-box">
-                            
-								<div class="hexagon">
-						  <div class="inner">  
-                                <i class="fa fa-clock-o"></i>
-						  </div>
-						</div>  
+                            <div class="service-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Go Anywhere</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                                <p>No destination is out of reach. Our vehicles are ready to take you wherever your heart desires, near or far.</p>
                             </div>
                         </div>
-                    </div><!--/.col-md-4-->
+                    </div>
 
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
                         <div class="media service-box">
-							<div class="hexagon">
-						  <div class="inner">  
+                            <div class="service-icon">
                                 <i class="fa fa-paper-plane-o"></i>
-						  </div>
-						</div>   
+                            </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Flexi Packages</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                                <p>Customize your rental experience with our flexible packages designed to fit your schedule, budget, and travel plans perfectly.</p>
                             </div>
                         </div>
-                    </div><!--/.col-md-4-->
+                    </div>
 
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
                         <div class="media service-box">
-							<div class="hexagon">
-						  <div class="inner">  
-                                <i class="fa fa-calendar"></i>
-						  </div>
-						</div>    
+                            <div class="service-icon">
+                                <i class="fa fa-headphones"></i>
+                            </div>
                             <div class="media-body">
                                 <h4 class="media-heading">24x7 Assistance</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                                <p>Our dedicated support team is available around the clock to assist you with any queries or emergencies on the road.</p>
                             </div>
                         </div>
-                    </div><!--/.col-md-4-->
+                    </div>
                 </div>
-            </div><!--/.row-->    
-        </div><!--/.container-->
-    </section><!--/#services-->
+            </div>
+        </div>
+    </section>
 
- <section id="about">
+    <!-- Stats Counter Section -->
+    <section id="stats">
         <div class="container">
+            <div class="row">
+                <div class="col-sm-3 wow fadeInUp" data-wow-delay="0ms">
+                    <div class="stat-item">
+                        <i class="fa fa-car"></i>
+                        <span class="stat-number" data-count="350">0</span>
+                        <span class="plus">+</span>
+                        <p>Vehicles Available</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="stat-item">
+                        <i class="fa fa-smile-o"></i>
+                        <span class="stat-number" data-count="5200">0</span>
+                        <span class="plus">+</span>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="stat-item">
+                        <i class="fa fa-map-marker"></i>
+                        <span class="stat-number" data-count="120">0</span>
+                        <span class="plus">+</span>
+                        <p>Locations</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="stat-item">
+                        <i class="fa fa-trophy"></i>
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="plus">+</span>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">About Us</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+                <p class="text-center wow fadeInDown">Discover why thousands of customers trust us for their<br> car rental needs across the country.</p>
             </div>
 
             <div class="row">
                 <div class="col-sm-6 wow fadeInLeft">
-                  <img class="img-responsive" src="images/about.png" alt="">
+                    <div class="about-img-wrapper">
+                        <img class="img-responsive" src="images/about.png" alt="About Rolls Car Rental">
+                    </div>
                 </div>
 
                 <div class="col-sm-6 wow fadeInRight">
                     <h3 class="column-title">We are Market Leader</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                    <p>With over 15 years of experience in the car rental industry, Rolls Car Rental has established itself as the market leader, providing unmatched service quality and an extensive fleet of premium vehicles.</p>
 
-                    <p>Nulla eu neque commodo, dapibus dolor eget, dictum arcu. In nec purus eu tellus consequat ultricies. Donec feugiat tempor turpis, rutrum sagittis mi venenatis at. Sed molestie lorem a blandit congue. Ut pellentesque odio quis leo volutpat, vitae vulputate felis condimentum. </p>
+                    <p>Our commitment to customer satisfaction drives everything we do. From our meticulously maintained vehicles to our professional support team, we ensure every rental experience exceeds expectations.</p>
 
-					<p>Praesent vulputate fermentum lorem, id rhoncus sem vehicula eu. Quisque ullamcorper, orci adipiscing auctor viverra, velit arcu malesuada metus, in volutpat tellus sem at justo.</p>
+                    <p>Whether you need a car for a business trip, family vacation, or a special occasion, our diverse range of vehicles and flexible rental plans are designed to cater to your specific requirements.</p>
 
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fa fa-check-circle"></i>
+                            <span>Premium Fleet</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa fa-check-circle"></i>
+                            <span>Best Rates</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa fa-check-circle"></i>
+                            <span>Full Insurance</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa fa-check-circle"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
 
                     <a class="btn btn-primary" href="#">Learn More</a>
-
                 </div>
             </div>
         </div>
-    </section><!--/#about-->
-   <section id="portfolio">
-            <!-- Start Gallery 1-2 -->
-    <section id="gallery-1" data-section="gallery-1" class="data-section"  class="content-block section-wrapper gallery-1">
-    	
-    	<div class="container">
-    	
-	   <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">Cars</h2>
-                <p class="text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
-            </div>
-			<div class="editContent">
-	            <ul class="filter">
-	                <li class="active"><a href="#" data-filter="*">All</a></li>
-	                <li><a href="#" data-filter=".artwork">BMW</a></li>
-	                <li><a href="#" data-filter=".creative">Benz</a></li>
-	                <li><a href="#" data-filter=".nature">Audi</a></li>
-	                <li><a href="#" data-filter=".outside">Mercedes</a></li>
-	                <li><a href="#" data-filter=".photography">Porsche</a></li>
-	            </ul>
-			</div>
-            <!-- /.gallery-filter -->
-            
-            <div class="row">
-                <div id="isotope-gallery-container">
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
-                        <div class="gallery-item">
-                            <div class="gallery-thumb">
-                                <img src="images/portfolio/1.jpg" class="img-responsive" alt="1st gallery Thumb">
-                                <div class="image-overlay"></div>
-                                <a href="images/portfolio/1.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
-                            </div>
-                            <div class="gallery-details">
-                            	<div class="editContent">
-	                                <h5>1st gallery Item</h5>
-                            	</div>
-                            	<div class="editContent">
-	                                <p>Nullam id dolor id nibh ultricies vehicula.</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.gallery-item-wrapper -->
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper nature outside">
-                        <div class="gallery-item">
-                            <div class="gallery-thumb">
-                                <img src="images/portfolio/2.jpg" class="img-responsive" alt="2nd gallery Thumb">
-                                <div class="image-overlay"></div>
-                                <a href="images/portfolio/2.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
-                            </div>
-                            <div class="gallery-details">
-                            	<div class="editContent">
-                                	<h5>2nd gallery Item</h5>
-                            	</div>
-                            	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.gallery-item-wrapper -->
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper photography artwork">
-                        <div class="gallery-item">
-                            <div class="gallery-thumb">
-                                <img src="images/portfolio/3.jpg" class="img-responsive" alt="3rd gallery Thumb">
-                                <div class="image-overlay"></div>
-                                <a href="images/portfolio/3.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
-                            </div>
-                            <div class="gallery-details">
-                            	<div class="editContent">
-                                	<h5>3rd gallery Item</h5>
-                            	</div>
-                            	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.gallery-item-wrapper -->
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper creative nature">
-                        <div class="gallery-item">
-                            <div class="gallery-thumb">
-                                <img src="images/portfolio/4.jpg" class="img-responsive" alt="4th gallery Thumb">
-                                <div class="image-overlay"></div>
-                                <a href="images/portfolio/4.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
-                            </div>
-                            <div class="gallery-details">
-                            	<div class="editContent">
-                                	<h5>4th gallery Item</h5>
-                            	</div>
-                            	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.gallery-item-wrapper -->
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper nature">
-                        <div class="gallery-item">
-                            <div class="gallery-thumb">
-                                <img src="images/portfolio/5.jpg" class="img-responsive" alt="5th gallery Thumb">
-                                <div class="image-overlay"></div>
-                                <a href="images/portfolio/5.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
-                            </div>
-                            <div class="gallery-details">
-                            	<div class="editContent">
-                                	<h5>5th gallery Item</h5>
-                            	</div>
-                            	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.gallery-item-wrapper -->
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
-                        <div class="gallery-item">
-                            <div class="gallery-thumb">
-                                <img src="images/portfolio/6.jpg" class="img-responsive" alt="6th gallery Thumb">
-                                <div class="image-overlay"></div>
-                                <a href="images/portfolio/6.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
-                            </div>
-                            <div class="gallery-details">
-                            	<div class="editContent">
-                                	<h5>6th gallery Item</h5>
-                            	</div>
-                            	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <!-- /.isotope-gallery-container -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
     </section>
-    <!--// End Gallery 1-2 -->
-   </section><!--/#portfolio-->
 
-   
-   
+    <!-- Gallery / Fleet Section -->
+    <section id="portfolio">
+        <section id="gallery-1" data-section="gallery-1" class="data-section content-block section-wrapper gallery-1">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-center wow fadeInDown">Our Fleet</h2>
+                    <p class="text-center wow fadeInDown">Explore our diverse collection of premium vehicles<br> available for your next adventure.</p>
+                </div>
+                <div class="editContent">
+                    <ul class="filter">
+                        <li class="active"><a href="#" data-filter="*">All</a></li>
+                        <li><a href="#" data-filter=".artwork">BMW</a></li>
+                        <li><a href="#" data-filter=".creative">Benz</a></li>
+                        <li><a href="#" data-filter=".nature">Audi</a></li>
+                        <li><a href="#" data-filter=".outside">Mercedes</a></li>
+                        <li><a href="#" data-filter=".photography">Porsche</a></li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div id="isotope-gallery-container">
+                        <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
+                            <div class="gallery-item">
+                                <div class="gallery-thumb">
+                                    <img src="images/portfolio/1.jpg" class="img-responsive" alt="BMW Luxury Sedan">
+                                    <div class="image-overlay"></div>
+                                    <a href="images/portfolio/1.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                    <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="gallery-details">
+                                    <h5>BMW 5 Series</h5>
+                                    <p>Luxury sedan with premium interiors</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper nature outside">
+                            <div class="gallery-item">
+                                <div class="gallery-thumb">
+                                    <img src="images/portfolio/2.jpg" class="img-responsive" alt="Audi Sport">
+                                    <div class="image-overlay"></div>
+                                    <a href="images/portfolio/2.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                    <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="gallery-details">
+                                    <h5>Audi A6</h5>
+                                    <p>Sporty elegance meets performance</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper photography artwork">
+                            <div class="gallery-item">
+                                <div class="gallery-thumb">
+                                    <img src="images/portfolio/3.jpg" class="img-responsive" alt="Porsche 911">
+                                    <div class="image-overlay"></div>
+                                    <a href="images/portfolio/3.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                    <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="gallery-details">
+                                    <h5>Porsche 911</h5>
+                                    <p>Iconic sports car, thrilling drive</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper creative nature">
+                            <div class="gallery-item">
+                                <div class="gallery-thumb">
+                                    <img src="images/portfolio/4.jpg" class="img-responsive" alt="Mercedes S-Class">
+                                    <div class="image-overlay"></div>
+                                    <a href="images/portfolio/4.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                    <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="gallery-details">
+                                    <h5>Mercedes S-Class</h5>
+                                    <p>The pinnacle of automotive luxury</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper nature">
+                            <div class="gallery-item">
+                                <div class="gallery-thumb">
+                                    <img src="images/portfolio/5.jpg" class="img-responsive" alt="Audi Q7">
+                                    <div class="image-overlay"></div>
+                                    <a href="images/portfolio/5.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                    <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="gallery-details">
+                                    <h5>Audi Q7</h5>
+                                    <p>Premium SUV for every terrain</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
+                            <div class="gallery-item">
+                                <div class="gallery-thumb">
+                                    <img src="images/portfolio/6.jpg" class="img-responsive" alt="BMW X5">
+                                    <div class="image-overlay"></div>
+                                    <a href="images/portfolio/6.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                    <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                </div>
+                                <div class="gallery-details">
+                                    <h5>BMW X5</h5>
+                                    <p>Versatile luxury SUV experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Team Section -->
     <section id="our-team">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">The Best Team</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+                <p class="text-center wow fadeInDown">Meet the passionate professionals behind<br> our exceptional car rental service.</p>
             </div>
 
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
                         <div class="team-img">
-                            <img class="img-responsive" src="images/team/01.jpg" alt="">
+                            <img class="img-responsive" src="images/team/01.jpg" alt="John Deo - CEO">
+                            <div class="team-overlay">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="team-info">
                             <h3>John Deo</h3>
-                            <span>CEO</span>
-                        </div>  
+                            <span>CEO & Founder</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
                         <div class="team-img">
-                            <img class="img-responsive" src="images/team/02.jpg" alt="">
+                            <img class="img-responsive" src="images/team/02.jpg" alt="Mike Timobbs - Manager">
+                            <div class="team-overlay">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="team-info">
                             <h3>Mike Timobbs</h3>
-                            <span>Manager</span>
-                        </div>  
+                            <span>Operations Manager</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
                         <div class="team-img">
-                            <img class="img-responsive" src="images/team/03.jpg" alt="">
+                            <img class="img-responsive" src="images/team/03.jpg" alt="Remo Silvaus - Designer">
+                            <div class="team-overlay">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="team-info">
                             <h3>Remo Silvaus</h3>
-                            <span>Designer</span>
-                        </div>  
+                            <span>Fleet Director</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
                         <div class="team-img">
-                            <img class="img-responsive" src="images/team/04.jpg" alt="">
+                            <img class="img-responsive" src="images/team/04.jpg" alt="Niscal Deon - Engineer">
+                            <div class="team-overlay">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="team-info">
                             <h3>Niscal Deon</h3>
-                            <span>Engineer</span>
-                        </div>  
+                            <span>Chief Mechanic</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </section><!--/#our-team-->
+    </section>
 
+    <!-- Pricing Section -->
     <section id="pricing">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Best Plans</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+                <p class="text-center wow fadeInDown">Choose the perfect rental plan that suits your needs<br> and budget with no hidden charges.</p>
             </div>
 
             <div class="row">
@@ -451,23 +520,22 @@
                         <ul class="pricing">
                             <li class="plan-header">
                                 <div class="price-duration">
-                                    <span class="price">
-                                        $45
-                                    </span>
-                                    <span class="duration">
-                                        per month
-                                    </span>
+                                    <span class="price">$45</span>
+                                    <span class="duration">per month</span>
                                 </div>
-
-                                <div class="plan-name">
-                                    Basic
-                                </div>
+                                <div class="plan-name">Basic</div>
                             </li>
-                            <li><p>Nique porriqua tquises dolorem
-							desumquia doloresamet consectet adipisci.
-							Masagni dolores eoquie voluptate sequi
-							saliquam quaerat voluptate.</p></li>
-                            <li class="plan-purchase"><a class="btn btn-primary" href="#">Order Now!</a></li>
+                            <li>
+                                <ul class="plan-features">
+                                    <li><i class="fa fa-check"></i> Economy vehicle</li>
+                                    <li><i class="fa fa-check"></i> 500km/month</li>
+                                    <li><i class="fa fa-check"></i> Basic insurance</li>
+                                    <li><i class="fa fa-check"></i> Email support</li>
+                                    <li><i class="fa fa-times"></i> GPS navigation</li>
+                                    <li><i class="fa fa-times"></i> Priority pickup</li>
+                                </ul>
+                            </li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">Get Started</a></li>
                         </ul>
                     </div>
                 </div>
@@ -475,24 +543,24 @@
                     <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="200ms">
                         <ul class="pricing featured">
                             <li class="plan-header">
+                                <div class="popular-badge">Most Popular</div>
                                 <div class="price-duration">
-                                    <span class="price">
-                                        $85
-                                    </span>
-                                    <span class="duration">
-                                        per month
-                                    </span>
+                                    <span class="price">$85</span>
+                                    <span class="duration">per month</span>
                                 </div>
-
-                                <div class="plan-name">
-                                    Standard
-                                </div>
+                                <div class="plan-name">Standard</div>
                             </li>
-                             <li><p>Nique porriqua tquises dolorem
-							desumquia doloresamet consectet adipisci.
-							Masagni dolores eoquie voluptate sequi
-							saliquam quaerat voluptate.</p></li>
-                            <li class="plan-purchase"><a class="btn btn-primary" href="#">Order Now!</a></li>
+                            <li>
+                                <ul class="plan-features">
+                                    <li><i class="fa fa-check"></i> Compact vehicle</li>
+                                    <li><i class="fa fa-check"></i> 1000km/month</li>
+                                    <li><i class="fa fa-check"></i> Full insurance</li>
+                                    <li><i class="fa fa-check"></i> 24/7 support</li>
+                                    <li><i class="fa fa-check"></i> GPS navigation</li>
+                                    <li><i class="fa fa-times"></i> Priority pickup</li>
+                                </ul>
+                            </li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">Get Started</a></li>
                         </ul>
                     </div>
                 </div>
@@ -501,23 +569,22 @@
                         <ul class="pricing">
                             <li class="plan-header">
                                 <div class="price-duration">
-                                    <span class="price">
-                                        $125
-                                    </span>
-                                    <span class="duration">
-                                        per month
-                                    </span>
+                                    <span class="price">$125</span>
+                                    <span class="duration">per month</span>
                                 </div>
-
-                                <div class="plan-name">
-                                    Gold
-                                </div>
+                                <div class="plan-name">Gold</div>
                             </li>
-                             <li><p>Nique porriqua tquises dolorem
-							desumquia doloresamet consectet adipisci.
-							Masagni dolores eoquie voluptate sequi
-							saliquam quaerat voluptate.</p></li>
-                            <li class="plan-purchase"><a class="btn btn-primary" href="#">Order Now!</a></li>
+                            <li>
+                                <ul class="plan-features">
+                                    <li><i class="fa fa-check"></i> Luxury vehicle</li>
+                                    <li><i class="fa fa-check"></i> 2000km/month</li>
+                                    <li><i class="fa fa-check"></i> Premium insurance</li>
+                                    <li><i class="fa fa-check"></i> 24/7 support</li>
+                                    <li><i class="fa fa-check"></i> GPS navigation</li>
+                                    <li><i class="fa fa-check"></i> Priority pickup</li>
+                                </ul>
+                            </li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">Get Started</a></li>
                         </ul>
                     </div>
                 </div>
@@ -526,51 +593,62 @@
                         <ul class="pricing">
                             <li class="plan-header">
                                 <div class="price-duration">
-                                    <span class="price">
-                                        $185
-                                    </span>
-                                    <span class="duration">
-                                        per month
-                                    </span>
+                                    <span class="price">$185</span>
+                                    <span class="duration">per month</span>
                                 </div>
-
-                                <div class="plan-name">
-                                    Platinum
-                                </div>
+                                <div class="plan-name">Platinum</div>
                             </li>
-                            <li><p>Nique porriqua tquises dolorem
-							desumquia doloresamet consectet adipisci.
-							Masagni dolores eoquie voluptate sequi
-							saliquam quaerat voluptate.</p></li>
-                            <li class="plan-purchase"><a class="btn btn-primary" href="#">Order Now!</a></li>
+                            <li>
+                                <ul class="plan-features">
+                                    <li><i class="fa fa-check"></i> Premium vehicle</li>
+                                    <li><i class="fa fa-check"></i> Unlimited km</li>
+                                    <li><i class="fa fa-check"></i> Full coverage</li>
+                                    <li><i class="fa fa-check"></i> VIP support</li>
+                                    <li><i class="fa fa-check"></i> GPS + Wi-Fi</li>
+                                    <li><i class="fa fa-check"></i> Chauffeur option</li>
+                                </ul>
+                            </li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">Get Started</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!--/#pricing-->
+    </section>
 
+    <!-- Testimonial Section -->
     <section id="testimonial">
         <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown" style="color:#fff;">What Our Clients Say</h2>
+                <p class="text-center wow fadeInDown" style="color:rgba(255,255,255,0.7);">Hear from our satisfied customers about their<br> experience with Rolls Car Rental.</p>
+            </div>
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
-
                     <div id="carousel-testimonial" class="carousel slide text-center" data-ride="carousel">
-                        <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <p><img class="img-thumbnail" src="images/pic1.jpg" alt=""></p>
-                                <h4>John Deo</h4> 
-                                <p>Fusce non fermentum mi. Praesent vel lobortis elit. Nulla sodales, risus quis sollicitudin iaculis, felis dolor aliquet purus, eget elementum velit nunc eu dolor. Curabitur elit tellus.</p>
+                                <div class="testimonial-item">
+                                    <div class="testimonial-img">
+                                        <img class="img-circle" src="images/pic1.jpg" alt="John Deo">
+                                    </div>
+                                    <p class="testimonial-text">"Rolls Car Rental made my business trip effortless. The vehicle was spotless, the pickup was seamless, and the rates were incredibly competitive. I've been a loyal customer for over two years now."</p>
+                                    <h4>John Deo</h4>
+                                    <span class="testimonial-role">Business Executive</span>
+                                </div>
                             </div>
                             <div class="item">
-                                <p><img class="img-thumbnail" src="images/pic2.jpg" alt=""></p>
-                                <h4>Gramth Larry</h4> 
-                                <p>Fusce non fermentum mi. Praesent vel lobortis elit. Nulla sodales, risus quis sollicitudin iaculis, felis dolor aliquet purus, eget elementum velit nunc eu dolor. Curabitur elit tellus, dictu.</p>
+                                <div class="testimonial-item">
+                                    <div class="testimonial-img">
+                                        <img class="img-circle" src="images/pic2.jpg" alt="Gramth Larry">
+                                    </div>
+                                    <p class="testimonial-text">"From booking to return, everything was handled with utmost professionalism. The luxury fleet is well-maintained and their 24/7 support gave me complete peace of mind during my road trip."</p>
+                                    <h4>Gramth Larry</h4>
+                                    <span class="testimonial-role">Travel Blogger</span>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Controls -->
                         <div class="btns">
                             <a class="btn btn-primary btn-sm" href="#carousel-testimonial" role="button" data-slide="prev">
                                 <span class="fa fa-angle-left" aria-hidden="true"></span>
@@ -585,111 +663,129 @@
                 </div>
             </div>
         </div>
-    </section><!--/#testimonial-->
+    </section>
 
-    
-    <section id="contact-us">
+    <!-- Contact Section -->
+    <section id="contact">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Contact Us</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+                <p class="text-center wow fadeInDown">Have questions? We'd love to hear from you. Send us<br> a message and we'll respond as soon as possible.</p>
             </div>
-        </div>
-    </section><!--/#contact-us-->
 
-
-    <section id="contact">
-        
-        <div class="container-wrapper">
-            <div class="container contact-info">
-                <div class="row">
-				  <div class="col-sm-4 col-md-4">
-                        <div class="contact-form"> 
-                            <address>
-                              <strong>Amazing Company, Inc.</strong><br>
-                              12345 NewYork, Street 125<br>
-                              United States 94107<br>
-                              <abbr title="Phone">P:</abbr> (123) 456-7890
-                            </address>
-					</div></div>
-                    <div class="col-sm-8 col-md-8">
-                        <div class="contact-form">
-                       
-                        <!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
-        
-		<form name="sentMessage" id="contactForm"  novalidate>
-	       <h3>Contact Form</h3>
-		 <div class="control-group">
-                    <div class="controls">
-			<input type="text" class="form-control" 
-			   	   placeholder="Full Name" id="name" required
-			           data-validation-required-message="Please enter your name" />
-			  <p class="help-block"></p>
-		   </div>
-	         </div> 	
-                <div class="control-group">
-                  <div class="controls">
-			<input type="email" class="form-control" placeholder="Email" 
-			   	            id="email" required
-			   		   data-validation-required-message="Please enter your email" />
-		</div>
-	    </div> 	
-			  
-               <div class="control-group">
-                 <div class="controls">
-				 <textarea rows="10" cols="100" class="form-control" 
-                       placeholder="Message" id="message" required
-		       data-validation-required-message="Please enter your message" minlength="5" 
-                       data-validation-minlength-message="Min 5 characters" 
-                        maxlength="999" style="resize:none"></textarea>
-		</div>
-               </div> 		 
-	     <div id="success"> </div> <!-- For success/fail messages -->
-	    <button type="submit" class="btn btn-primary pull-right">Send</button><br />
-          </form>
+            <div class="row contact-info">
+                <div class="col-sm-4 col-md-4">
+                    <div class="contact-form">
+                        <address>
+                            <strong>Rolls Car Rental, Inc.</strong><br>
+                            12345 NewYork, Street 125<br>
+                            United States 94107<br>
+                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+                        <div class="contact-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
                         </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-8">
+                    <div class="contact-form">
+                        <form name="sentMessage" id="contactForm" novalidate>
+                            <h3>Send Us a Message</h3>
+                            <div class="row">
+                                <div class="col-sm-6 control-group">
+                                    <div class="controls">
+                                        <input type="text" class="form-control" placeholder="Full Name" id="name" required data-validation-required-message="Please enter your name" />
+                                        <p class="help-block"></p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 control-group">
+                                    <div class="controls">
+                                        <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input type="text" class="form-control" placeholder="Subject" id="subject" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <textarea rows="6" cols="100" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter your message" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
+                                </div>
+                            </div>
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-primary pull-right">Send Message</button><br />
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-<div id="google-map" style="height:400px" data-latitude="40.7141667" data-longitude="-74.00638891"></div>   
-   </section><!--/#bottom-->
+        <div id="google-map" style="height:400px" data-latitude="40.7141667" data-longitude="-74.00638891"></div>
+    </section>
 
+    <!-- Footer -->
     <footer id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2018 Company Name. <a href="https://webthemez.com/free-bootstrap-templates/" target="_blank">Free Bootstrap Template</a> by WebThemez.com
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-brand">
+                        <i class="fa fa-car"></i>
+                        <span>Rolls</span> Car Rental
+                    </div>
+                    <p class="footer-desc">Premium car rental service offering luxury and economy vehicles with flexible packages, comprehensive insurance, and 24/7 roadside assistance.</p>
                 </div>
-                <div class="col-sm-6">
-                    <ul class="social-icons">
+                <div class="col-md-4 col-sm-6">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#portfolio">Our Fleet</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get the latest deals and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                    <ul class="social-icons footer-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                         <li><a href="#"><i class="fa fa-github"></i></a></li>
                     </ul>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Rolls Car Rental. All Rights Reserved. Designed with <i class="fa fa-heart" style="color:#ffb74d;"></i> by Ranshika</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer><!--/#footer-->
+    </footer>
 
+    <!-- Scripts -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mousescroll.js"></script>
     <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script> 
     <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="contact/jqBootstrapValidation.js"></script>
-    <script src="contact/contact_me.js"></script>
- 
-    <script type="text/javascript" src="js/jquery.isotope.min.js"></script><!-- Gallery Filter -->
-	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
-	 
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/custom-scripts.js"></script>
 </body>
 </html>

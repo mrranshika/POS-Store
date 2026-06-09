@@ -1,18 +1,49 @@
 jQuery(function($) {
     'use strict';
 
-    // Nav Scroll
-    $(window).scroll(function(event) {
-        Scroll();
+    // ===== Preloader =====
+    $(window).on('load', function() {
+        setTimeout(function() {
+            $('#preloader').addClass('loaded');
+        }, 800);
     });
 
+    // ===== Back to Top Button =====
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            $('#back-to-top').addClass('visible');
+        } else {
+            $('#back-to-top').removeClass('visible');
+        }
+    });
+
+    $('#back-to-top').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+
+    // ===== Navbar Scroll Effect =====
+    $(window).scroll(function() {
+        Scroll();
+        // Navbar background on scroll
+        if ($(window).scrollTop() > 50) {
+            $('#main-nav').addClass('scrolled');
+        } else {
+            $('#main-nav').removeClass('scrolled');
+        }
+    });
+
+    // ===== Smooth Scroll Navigation =====
     $('.navbar-collapse ul li a').on('click', function() {
         $('html, body').animate({
-            scrollTop: $(this.hash).offset().top - 5
-        }, 1000);
+            scrollTop: $(this.hash).offset().top - 70
+        }, 800, 'easeInOutQuart');
+        if ($(window).width() < 768) {
+            $('.navbar-collapse').collapse('hide');
+        }
         return false;
     });
- 
+
     function Scroll() {
         var contentTop = [];
         var contentBottom = [];
@@ -20,29 +51,24 @@ jQuery(function($) {
         var rangeTop = 200;
         var rangeBottom = 500;
         $('.navbar-collapse').find('.scroll a').each(function() {
-            contentTop.push($($(this).attr('href')).offset().top);
-            contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
-        })
+            var target = $($(this).attr('href'));
+            if (target.length) {
+                contentTop.push(target.offset().top);
+                contentBottom.push(target.offset().top + target.height());
+            }
+        });
         $.each(contentTop, function(i) {
             if (winTop > contentTop[i] - rangeTop) {
                 $('.navbar-collapse li.scroll')
                     .removeClass('active')
                     .eq(i).addClass('active');
             }
-        })
-    };
+        });
+    }
 
-    $('#tohash').on('click', function() {
-        $('html, body').animate({
-            scrollTop: $(this.hash).offset().top - 5
-        }, 1000);
-        return false;
-    });
-
-    //Slider
+    // ===== Slider with Progress Bar =====
     $(document).ready(function() {
-        var time = 7; // time in seconds
-
+        var time = 7;
         var $progressBar,
             $bar,
             $elem,
@@ -50,7 +76,6 @@ jQuery(function($) {
             tick,
             percentTime;
 
-        //Init the carousel
         $("#main-slider").find('.owl-carousel').owlCarousel({
             slideSpeed: 500,
             paginationSpeed: 500,
@@ -63,176 +88,161 @@ jQuery(function($) {
             afterInit: progressBar,
             afterMove: moved,
             startDragging: pauseOnDragging,
-            //autoHeight : true,
-            transitionStyle: "fade" //fadeUp fade goDown backSlide
-
+            transitionStyle: "fade"
         });
- 
+
         function progressBar(elem) {
-            $elem = elem; 
-            buildProgressBar(); 
+            $elem = elem;
+            buildProgressBar();
             start();
         }
 
-        //create 
         function buildProgressBar() {
-            $progressBar = $("<div>", {
-                id: "progressBar"
-            });
-            $bar = $("<div>", {
-                id: "bar"
-            });
+            $progressBar = $("<div>", { id: "progressBar" });
+            $bar = $("<div>", { id: "bar" });
             $progressBar.append($bar).appendTo($elem);
         }
 
-        function start() { 
+        function start() {
             percentTime = 0;
-            isPause = false; 
+            isPause = false;
             tick = setInterval(interval, 10);
-        };
+        }
 
         function interval() {
             if (isPause === false) {
                 percentTime += 1 / time;
-                $bar.css({
-                    width: percentTime + "%"
-                }); 
-                if (percentTime >= 100) { 
-                    $elem.trigger('owl.next')
+                $bar.css({ width: percentTime + "%" });
+                if (percentTime >= 100) {
+                    $elem.trigger('owl.next');
                 }
             }
         }
 
-        //pause while dragging 
         function pauseOnDragging() {
             isPause = true;
         }
 
-        //moved callback
         function moved() {
-            //clear interval
             clearTimeout(tick);
-            //start again
             start();
         }
     });
 
-    //Initiat WOW JS
-    new WOW().init();
-    //smoothScroll
-    smoothScroll.init();
+    // ===== WOW.js Animations =====
+    new WOW({
+        offset: 80,
+        mobile: true
+    }).init();
 
-    // portfolio filter
-    $(window).load(function() {
+    // ===== Smooth Scroll =====
+    if (typeof smoothScroll !== 'undefined') {
+        smoothScroll.init();
+    }
+
+    // ===== Stats Counter Animation =====
+    var statsAnimated = false;
+    $(window).scroll(function() {
+        if (!statsAnimated) {
+            var statsSection = $('#stats');
+            if (statsSection.length) {
+                var statsTop = statsSection.offset().top - $(window).height() + 200;
+                if ($(window).scrollTop() > statsTop) {
+                    statsAnimated = true;
+                    $('.stat-number').each(function() {
+                        var $this = $(this);
+                        var target = parseInt($this.attr('data-count'));
+                        $({ count: 0 }).animate({ count: target }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function() {
+                                $this.text(Math.floor(this.count).toLocaleString());
+                            },
+                            complete: function() {
+                                $this.text(target.toLocaleString());
+                            }
+                        });
+                    });
+                }
+            }
+        }
+    });
+
+    // ===== Portfolio / Gallery Isotope Filter =====
+    $(window).on('load', function() {
         'use strict';
         var $portfolio_selectors = $('.portfolio-filter >li>a');
         var $portfolio = $('.portfolio-items');
-        $portfolio.isotope({
-            itemSelector: '.portfolio-item',
-            layoutMode: 'fitRows'
+        if ($portfolio.length) {
+            $portfolio.isotope({
+                itemSelector: '.portfolio-item',
+                layoutMode: 'fitRows'
+            });
+            $portfolio_selectors.on('click', function() {
+                $portfolio_selectors.removeClass('active');
+                $(this).addClass('active');
+                var selector = $(this).attr('data-filter');
+                $portfolio.isotope({ filter: selector });
+                return false;
+            });
+        }
+    });
+
+    // ===== Gallery Isotope Filter & Popup =====
+    $(document).ready(function() {
+        var $container = $('#isotope-gallery-container');
+        var $filter = $('.filter');
+
+        $(window).on('load', function() {
+            if ($container.length) {
+                $container.isotope({
+                    itemSelector: '.gallery-item-wrapper'
+                });
+                $('.filter a').click(function() {
+                    var selector = $(this).attr('data-filter');
+                    $container.isotope({ filter: selector });
+                    return false;
+                });
+                $filter.find('a').click(function() {
+                    var selector = $(this).attr('data-filter');
+                    $filter.find('a').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                });
+            }
         });
 
-        $portfolio_selectors.on('click', function() {
-            $portfolio_selectors.removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).attr('data-filter');
-            $portfolio.isotope({
-                filter: selector
-            });
-            return false;
+        $(window).smartresize(function() {
+            if ($container.length) {
+                $container.isotope('reLayout');
+            }
+        });
+
+        // Gallery Popup
+        $('.gallery-zoom').magnificPopup({
+            type: 'image',
+            mainClass: 'mfp-with-zoom',
+            zoom: {
+                enabled: true,
+                duration: 300,
+                easing: 'ease-in-out',
+                opener: function(openerElement) {
+                    return openerElement.is('i') ? openerElement : openerElement.find('i');
+                }
+            }
         });
     });
 
+    // ===== Animated Progress Bars =====
     $(document).ready(function() {
-        //Animated Progress
-        $('.progress-bar').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+        $('.progress-bar').bind('inview', function(event, visible) {
             if (visible) {
                 $(this).css('width', $(this).data('width') + '%');
                 $(this).unbind('inview');
             }
         });
-
-        //Animated Number
-        $.fn.animateNumbers = function(stop, commas, duration, ease) {
-            return this.each(function() {
-                var $this = $(this);
-                var start = parseInt($this.text().replace(/,/g, ""));
-                commas = (commas === undefined) ? true : commas;
-                $({
-                    value: start
-                }).animate({
-                    value: stop
-                }, {
-                    duration: duration == undefined ? 1000 : duration,
-                    easing: ease == undefined ? "swing" : ease,
-                    step: function() {
-                        $this.text(Math.floor(this.value));
-                        if (commas) {
-                            $this.text($this.text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-                        }
-                    },
-                    complete: function() {
-                        if (parseInt($this.text()) !== stop) {
-                            $this.text(stop);
-                            if (commas) {
-                                $this.text($this.text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-                            }
-                        }
-                    }
-                });
-            });
-        };
-
-        $('.business-stats').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-            var $this = $(this);
-            if (visible) {
-                $this.animateNumbers($this.data('digit'), false, $this.data('duration'));
-                $this.unbind('inview');
-            }
-        });
     });
 
-	/* -------- Isotope Filtering -------- */
-		$(document).ready(function(){
-		var $container = $('#isotope-gallery-container');
-		var $filter = $('.filter');
-		$(window).load(function () {
-			// Initialize Isotope
-			$container.isotope({
-				itemSelector: '.gallery-item-wrapper'
-			});
-			$('.filter a').click(function () {
-				var selector = $(this).attr('data-filter');
-				$container.isotope({ filter: selector });
-				return false;
-			});
-			$filter.find('a').click(function () {
-				var selector = $(this).attr('data-filter');
-				$filter.find('a').parent().removeClass('active');
-				$(this).parent().addClass('active');
-			});
-		});
-		$(window).smartresize(function () {
-			$container.isotope('reLayout');
-		});
-		// End Isotope Filtering
-
-
-		/* -------- Gallery Popup -------- */
-
-			$('.gallery-zoom').magnificPopup({ 
-				type: 'image'
-				// other options
-			});
-		});
-		// End Gallery Popup
-		
-    //Pretty Photo
-    $("a[rel^='prettyPhoto']").prettyPhoto({
-        social_tools: false
-    });
-
-    //Google Map
+    // ===== Google Map =====
     var latitude = $('#google-map').data('latitude');
     var longitude = $('#google-map').data('longitude');
 
@@ -241,14 +251,53 @@ jQuery(function($) {
         var mapOptions = {
             zoom: 12,
             scrollwheel: false,
-            center: myLatlng
+            center: myLatlng,
+            styles: [
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#121D29"}]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"color": "#ffffff"}]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#45aed6"}, {"lightness": 50}]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#ffb74d"}, {"lightness": 70}]
+                }
+            ]
         };
         var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
         var marker = new google.maps.Marker({
             position: myLatlng,
-            map: map
+            map: map,
+            icon: {
+                url: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'
+            }
         });
     }
-    google.maps.event.addDomListener(window, 'load', initialize_map);
+
+    if (typeof google !== 'undefined' && google.maps) {
+        google.maps.event.addDomListener(window, 'load', initialize_map);
+    }
+
+    // ===== Newsletter Form (prevent default) =====
+    $('.newsletter-form').on('submit', function(e) {
+        e.preventDefault();
+        var $input = $(this).find('input');
+        $input.val('');
+        $input.attr('placeholder', 'Thank you!');
+        setTimeout(function() {
+            $input.attr('placeholder', 'Enter your email');
+        }, 2000);
+    });
 
 });
